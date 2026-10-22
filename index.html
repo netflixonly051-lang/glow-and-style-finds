@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Glow and Style Finds — curated beauty, skincare, fashion and lifestyle finds.">
+  <meta name="theme-color" content="#c54b8c">
+  <title>Glow and Style Finds | Curated Beauty & Style</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#c54b8c;
+      --pink-dark:#8f2f62;
+      --ink:#161311;
+      --cream:#fff9fc;
+      --white:#fff;
+      --muted:#6e646a;
+      --line:#eadde4;
+      --gold:#c89b3c;
+      --shadow:0 18px 50px rgba(22,19,17,.09);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:var(--ink);color:#fff;text-align:center;padding:9px 16px;font-size:13px;letter-spacing:.04em}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,249,252,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1160px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-family:"Playfair Display",serif;font-size:22px;font-weight:700}
+    .mark{width:38px;height:38px;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:20px}
+    nav{display:flex;gap:25px;font-size:14px;font-weight:600}
+    nav a:hover{color:var(--pink)}
+    .nav-cta{background:var(--ink);color:#fff;padding:10px 17px;border-radius:999px;font-size:13px}
+    .hero{max-width:1160px;margin:auto;padding:78px 22px 65px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+    .eyebrow{color:var(--pink-dark);font-size:12px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(48px,7vw,82px);line-height:.98;margin:15px 0 24px;letter-spacing:-.035em}
+    h1 span{color:var(--pink)}
+    .hero p{font-size:18px;color:var(--muted);max-width:590px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{padding:13px 20px;border-radius:999px;font-weight:700;font-size:14px;display:inline-block}
+    .btn-primary{background:var(--pink);color:#fff}
+    .btn-secondary{border:1px solid var(--ink)}
+    .hero-card{min-height:440px;border-radius:34px;background:linear-gradient(145deg,#f5d8e7,#fff,#efd0e0);box-shadow:var(--shadow);position:relative;overflow:hidden;display:grid;place-items:center}
+    .hero-card:before,.hero-card:after{content:"";position:absolute;border-radius:50%;filter:blur(1px)}
+    .hero-card:before{width:300px;height:300px;background:rgba(197,75,140,.24);top:-75px;right:-70px}
+    .hero-card:after{width:220px;height:220px;background:rgba(200,155,60,.17);bottom:-70px;left:-45px}
+    .display{position:relative;z-index:1;text-align:center;padding:30px}
+    .display .circle{width:210px;height:210px;margin:auto;border-radius:50%;background:#fff;box-shadow:0 20px 45px rgba(82,38,60,.14);display:grid;place-items:center}
+    .display .circle strong{font-family:"Playfair Display",serif;font-size:42px;color:var(--pink)}
+    .display h2{font-family:"Playfair Display",serif;font-size:31px;margin:22px 0 4px}
+    .display p{margin:0;color:var(--muted)}
+    section{padding:75px 22px}
+    .section-inner{max-width:1160px;margin:auto}
+    .section-heading{text-align:center;max-width:700px;margin:0 auto 40px}
+    .section-heading h2{font-family:"Playfair Display",serif;font-size:43px;line-height:1.1;margin:10px 0}
+    .section-heading p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .category{background:#fff;border:1px solid var(--line);padding:28px 20px;border-radius:24px;transition:.2s}
+    .category:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .icon{font-size:30px}
+    .category h3{margin:13px 0 6px;font-family:"Playfair Display",serif;font-size:22px}
+    .category p{margin:0;color:var(--muted);font-size:14px}
+    .finds{background:#fff}
+    .find-card{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--cream)}
+    .photo{height:210px;display:grid;place-items:center;background:linear-gradient(135deg,#f4d7e6,#fff)}
+    .photo span{font-family:"Playfair Display",serif;font-size:32px;color:var(--pink)}
+    .find-body{padding:20px}
+    .find-body small{color:var(--pink-dark);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .find-body h3{font-family:"Playfair Display",serif;margin:7px 0}
+    .find-body p{color:var(--muted);font-size:14px;margin:0 0 15px}
+    .text-link{font-weight:800;color:var(--pink-dark);font-size:14px}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+    .about-box{min-height:330px;border-radius:30px;background:var(--ink);color:#fff;padding:45px;display:flex;align-items:end}
+    .about-box div{font-family:"Playfair Display",serif;font-size:38px;line-height:1.15}
+    .about-copy h2{font-family:"Playfair Display",serif;font-size:43px;line-height:1.1;margin:10px 0 15px}
+    .about-copy p{color:var(--muted)}
+    .newsletter{background:#f5dce9}
+    .signup{background:#fff;border-radius:28px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .signup h2{font-family:"Playfair Display",serif;margin:0;font-size:32px}
+    .signup p{color:var(--muted);margin:5px 0 0}
+    form{display:flex;gap:8px;min-width:min(100%,470px)}
+    input{flex:1;border:1px solid var(--line);padding:14px 16px;border-radius:999px;font:inherit;min-width:0}
+    button{border:0;cursor:pointer;font:inherit;font-weight:700}
+    footer{background:var(--ink);color:#fff;padding:50px 22px}
+    .footer-inner{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+    footer p{color:#c9c1c5;max-width:470px}
+    .socials{display:flex;gap:14px}
+    .socials a{border:1px solid #4b4548;padding:9px 14px;border-radius:999px;font-size:13px}
+    .copyright{border-top:1px solid #3a3638;margin-top:30px;padding-top:20px;color:#a9a1a5;font-size:12px}
+    @media(max-width:850px){
+      .hero,.about{grid-template-columns:1fr}
+      .hero{padding-top:55px}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .signup{display:block}
+      form{margin-top:20px}
+      nav{display:none}
+    }
+    @media(max-width:520px){
+      .grid{grid-template-columns:1fr}
+      .hero-card{min-height:340px}
+      .display .circle{width:160px;height:160px}
+      .display .circle strong{font-size:32px}
+      .signup{padding:25px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Curated finds • Beauty • Style • Lifestyle</div>
+
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home"><span class="mark">G</span> Glow & Style Finds</a>
+      <nav>
+        <a href="#categories">Categories</a>
+        <a href="#finds">Latest Finds</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#finds">Explore Finds</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Your destination for beautiful finds</div>
+        <h1>Find it.<br><span>Love it.</span><br>Style it.</h1>
+        <p>Discover handpicked beauty, skincare, fashion and lifestyle finds designed to inspire your next purchase and your next look.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#finds">Explore our finds</a>
+          <a class="btn btn-secondary" href="#about">Meet the brand</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="display">
+          <div class="circle"><strong>G&S</strong></div>
+          <h2>Glow beautifully.</h2>
+          <p>Style confidently. Live intentionally.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Browse the edit</div>
+          <h2>Something lovely is waiting for you.</h2>
+          <p>Explore our favourite corners of beauty, style and everyday living.</p>
+        </div>
+        <div class="grid">
+          <article class="category"><div class="icon">✨</div><h3>Beauty</h3><p>Makeup, tools and beauty essentials worth discovering.</p></article>
+          <article class="category"><div class="icon">🧴</div><h3>Skincare</h3><p>Fresh finds and simple inspiration for your routine.</p></article>
+          <article class="category"><div class="icon">👗</div><h3>Fashion</h3><p>Pieces, accessories and styling ideas with personality.</p></article>
+          <article class="category"><div class="icon">🏡</div><h3>Lifestyle</h3><p>Beautiful little things that make everyday life better.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="finds" id="finds">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">The latest edit</div>
+          <h2>Our favourite finds</h2>
+          <p>Replace these placeholders with your real products, affiliate links or shop pages.</p>
+        </div>
+        <div class="grid">
+          <article class="find-card"><div class="photo"><span>Beauty</span></div><div class="find-body"><small>01 · Beauty</small><h3>Everyday Glow Essentials</h3><p>A curated collection of products for an effortless polished look.</p><a class="text-link" href="#">View find →</a></div></article>
+          <article class="find-card"><div class="photo"><span>Skin</span></div><div class="find-body"><small>02 · Skincare</small><h3>Simple Skin Favourites</h3><p>Discover practical skincare picks and routine inspiration.</p><a class="text-link" href="#">View find →</a></div></article>
+          <article class="find-card"><div class="photo"><span>Style</span></div><div class="find-body"><small>03 · Fashion</small><h3>Pieces With Personality</h3><p>Accessories and fashion finds made to elevate your style.</p><a class="text-link" href="#">View find →</a></div></article>
+          <article class="find-card"><div class="photo"><span>Home</span></div><div class="find-body"><small>04 · Lifestyle</small><h3>Little Luxury Finds</h3><p>Beautiful everyday discoveries for your space and routine.</p><a class="text-link" href="#">View find →</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-inner about">
+        <div class="about-box"><div>Beautiful things.<br>Better choices.<br>Your style.</div></div>
+        <div class="about-copy">
+          <div class="eyebrow">About Glow & Style Finds</div>
+          <h2>Curated with you in mind.</h2>
+          <p>Glow and Style Finds is a discovery space for people who love beauty, personal style and thoughtful lifestyle finds. We bring together ideas and products that catch the eye, add value and make everyday choices a little easier.</p>
+          <p>Follow along for new discoveries, inspiration and shopping ideas.</p>
+          <div class="buttons"><a class="btn btn-primary" href="https://www.pinterest.com/" target="_blank" rel="noopener">Visit Pinterest</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div class="section-inner">
+        <div class="signup">
+          <div><h2>Stay in the glow.</h2><p>Get new finds and style inspiration in your inbox.</p></div>
+          <form onsubmit="event.preventDefault(); alert('Thank you! Your email has been noted. Connect this form to your email service before launch.');">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required>
+            <button class="btn btn-primary" type="submit">Join us</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="brand"><span class="mark">G</span> Glow & Style Finds</div>
+        <p>Beauty, style and lifestyle finds for your next little obsession.</p>
+      </div>
+      <div class="socials">
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="mailto:hello@glowandstylefinds.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-inner copyright">© 2026 Glow & Style Finds. All rights reserved.</div>
+  </footer>
+</body>
+</html>
