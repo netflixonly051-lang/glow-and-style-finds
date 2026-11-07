@@ -4,58 +4,614 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Glow & Style Finds: beauty, skincare, fashion, jewellery and beautiful living.">
+
+<meta name="description" content="Glow & Style Finds brings you original beauty tips, skincare guides, fashion inspiration, jewellery styling and beautiful living ideas.">
+
 <meta name="p:domain_verify" content="1a6415bbc26382bf6f180f6a47cbc3ee">
-<title>Glow &amp; Style Finds</title>
+
+<title>Glow & Style Finds | Beauty, Fashion & Lifestyle</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#fffaf6;color:#382932;font-family:Arial,sans-serif;line-height:1.6}header{background:#f8e6ed;text-align:center;padding:25px 15px;border-bottom:2px solid #c6a15b}header h1{font-family:Georgia,serif;color:#8f4566;margin:0;font-size:34px}nav{margin-top:15px}nav a{margin:0 10px;color:#8f4566;text-decoration:none;font-weight:bold}.hero{text-align:center;padding:45px 20px;background:#fff3f5}.hero h2{font: bold 42px Georgia,serif;color:#8f4566;margin:10px}.hero p{max-width:650px;margin:15px auto;color:#806d77}.button{display:inline-block;background:#8f4566;color:white;padding:12px 24px;border-radius:25px;text-decoration:none}.section{max-width:1100px;margin:auto;padding:45px 20px}.section h2{text-align:center;font: bold 32px Georgia,serif;color:#8f4566}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.card{background:white;border:1px solid #efd9e2;border-radius:14px;overflow:hidden;box-shadow:0 5px 18px #8f456615}.card img{display:block;width:100%;height:230px;object-fit:cover}.card h3{font: bold 23px Georgia,serif;color:#8f4566;margin:14px 15px 5px}.card p{margin:0 15px 18px;color:#806d77;font-size:14px}.about{background:#f8e6ed;text-align:center;padding:45px 20px}.about p{max-width:700px;margin:15px auto;color:#66505c}footer{text-align:center;background:#8f4566;color:white;padding:25px}footer a{color:white}@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h2{font-size:34px}}@media(max-width:480px){.grid{grid-template-columns:1fr}nav a{display:inline-block;margin:5px}}
+*{box-sizing:border-box}
+
+body{
+margin:0;
+background:#fffaf6;
+color:#382932;
+font-family:Arial,sans-serif;
+line-height:1.7;
+}
+
+header{
+background:#f8e6ed;
+text-align:center;
+padding:25px 15px;
+border-bottom:2px solid #c6a15b;
+}
+
+header h1{
+font-family:Georgia,serif;
+color:#8f4566;
+margin:0;
+font-size:34px;
+}
+
+nav{margin-top:15px}
+
+nav a{
+display:inline-block;
+margin:5px 10px;
+color:#8f4566;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{text-decoration:underline}
+
+.hero{
+text-align:center;
+padding:55px 20px;
+background:#fff3f5;
+}
+
+.hero h2{
+font:bold 42px Georgia,serif;
+color:#8f4566;
+margin:10px;
+}
+
+.hero p{
+max-width:700px;
+margin:15px auto;
+color:#806d77;
+}
+
+.button{
+display:inline-block;
+background:#8f4566;
+color:white;
+padding:12px 24px;
+border-radius:25px;
+text-decoration:none;
+margin-top:10px;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:45px 20px;
+}
+
+.section h2{
+text-align:center;
+font:bold 32px Georgia,serif;
+color:#8f4566;
+}
+
+.intro{
+text-align:center;
+max-width:750px;
+margin:0 auto 30px;
+color:#806d77;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:22px;
+}
+
+.card{
+background:white;
+border:1px solid #efd9e2;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 5px 18px #8f456615;
+}
+
+.card img{
+display:block;
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+font:bold 22px Georgia,serif;
+color:#8f4566;
+margin:14px 15px 5px;
+}
+
+.card p{
+margin:0 15px 15px;
+color:#806d77;
+font-size:14px;
+}
+
+.card a{
+display:inline-block;
+margin:0 15px 18px;
+color:#8f4566;
+font-weight:bold;
+text-decoration:none;
+}
+
+.card a:hover{text-decoration:underline}
+
+.blog-article{
+background:white;
+padding:30px;
+margin:25px 0;
+border-radius:14px;
+border:1px solid #efd9e2;
+}
+
+.blog-article h3{
+font:bold 27px Georgia,serif;
+color:#8f4566;
+margin-top:0;
+}
+
+.blog-article h4{
+color:#8f4566;
+font-size:18px;
+margin-bottom:5px;
+}
+
+.blog-article p,.blog-article li{
+color:#66505c;
+}
+
+.blog-article ul{
+padding-left:23px;
+}
+
+.about{
+background:#f8e6ed;
+text-align:center;
+padding:45px 20px;
+}
+
+.about p{
+max-width:700px;
+margin:15px auto;
+color:#66505c;
+}
+
+footer{
+text-align:center;
+background:#8f4566;
+color:white;
+padding:30px 20px;
+}
+
+footer a{color:white}
+
+.affiliate-disclosure{
+max-width:700px;
+margin:25px auto 0;
+padding-top:15px;
+border-top:1px solid #ffffff55;
+font-size:13px;
+}
+
+@media(max-width:700px){
+.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hero h2{font-size:34px}
+}
+
+@media(max-width:480px){
+.grid{grid-template-columns:1fr}
+nav a{margin:5px}
+.blog-article{padding:20px}
+}
 </style>
 </head>
+
 <body>
+
 <header>
 <h1>Glow &amp; Style Finds</h1>
 <p>A little inspiration for your everyday glow ✨</p>
-<nav><a href="#categories">Categories</a><a href="#finds">Latest Finds</a><a href="#about">About</a></nav>
+
+<nav>
+<a href="#categories">Categories</a>
+<a href="#finds">Latest Finds</a>
+<a href="#blog">Our Blog</a>
+<a href="#about">Meet the Brand</a>
+</nav>
 </header>
+
 <section class="hero">
 <p>BEAUTY · STYLE · BEAUTIFUL LIVING</p>
 <h2>Find it. Love it. Style it.</h2>
-<p>Thoughtful beauty, skincare, fashion, jewellery and home finds to inspire your next little obsession.</p>
-<a class="button" href="#finds">Explore the Finds</a>
+
+<p>
+Discover beauty inspiration, simple skincare ideas,
+fashion tips, jewellery styling and thoughtful home inspiration.
+</p>
+
+<a class="button" href="#blog">Explore Our Guides</a>
 </section>
+
 <section class="section" id="categories">
+
 <h2>Find Something Lovely</h2>
+
+<p class="intro">
+Explore our favourite topics and discover fresh inspiration
+for your beauty routine, personal style and everyday living.
+</p>
+
 <div class="grid">
-<article class="card"><img src="https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Beauty and makeup products"><h3>Beauty</h3><p>Makeup, beauty tools and everyday essentials to help you feel your best.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Skincare products"><h3>Skincare</h3><p>Simple skincare inspiration for your daily glow routine.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Fashion outfit inspiration"><h3>Fashion</h3><p>Wearable outfits, accessories and style ideas.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Jewellery and accessories"><h3>Jewellery</h3><p>Elegant finishing touches for your personal style.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Beautiful home interior"><h3>Beautiful Living</h3><p>Thoughtful home details that make a space feel special.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/2587175/pexels-photo-2587175.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Perfume and personal accessories"><h3>Little Luxuries</h3><p>Lovely details for your space, style and routine.</p></article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Beauty and makeup products">
+<h3>Beauty</h3>
+<p>Makeup, beauty tools and everyday essentials.</p>
+<a href="#beauty-guide">Explore Beauty →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Skincare products">
+<h3>Skincare</h3>
+<p>Simple skincare inspiration for your daily glow.</p>
+<a href="#skincare-guide">Explore Skincare →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Fashion outfit inspiration">
+<h3>Fashion</h3>
+<p>Wearable outfits, accessories and style ideas.</p>
+<a href="#fashion-guide">Explore Fashion →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Jewellery and accessories">
+<h3>Jewellery</h3>
+<p>Elegant finishing touches for your personal style.</p>
+<a href="#jewellery-guide">Explore Jewellery →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Beautiful home interior">
+<h3>Beautiful Living</h3>
+<p>Thoughtful home details that make a space special.</p>
+<a href="#living-guide">Explore Living →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/2587175/pexels-photo-2587175.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Perfume and personal accessories">
+<h3>Little Luxuries</h3>
+<p>Lovely details for your space, style and routine.</p>
+<a href="#blog">Discover More →</a>
+</article>
+
 </div>
 </section>
+
 <section class="section" id="finds">
+
 <h2>The Latest Edit</h2>
+
+<p class="intro">
+A collection of ideas and inspiration to help you
+make everyday choices feel a little more special.
+</p>
+
 <div class="grid">
-<article class="card"><img src="https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Beauty essentials"><h3>Beauty Essentials</h3><p>Everyday beauty favourites to brighten your routine.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Skincare shelf"><h3>Your Skincare Shelf</h3><p>Ideas for a simple, feel-good skincare routine.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Fashion looks"><h3>Everyday Style</h3><p>Fresh outfit inspiration and versatile wardrobe ideas.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Jewellery pieces"><h3>Little Luxuries</h3><p>Discover jewellery and accessories that feel special.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Home decor"><h3>Beautiful Living</h3><p>Warm spaces and thoughtful home details.</p></article>
-<article class="card"><img src="https://images.pexels.com/photos/2587175/pexels-photo-2587175.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Perfume and accessories"><h3>Little Details</h3><p>Small touches to make everyday life feel lovely.</p></article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Beauty essentials">
+<h3>Beauty Essentials</h3>
+<p>Discover the basics of a simple beauty collection.</p>
+<a href="#beauty-guide">Read our guide →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Skincare shelf">
+<h3>Your Skincare Shelf</h3>
+<p>Ideas for building a simple skincare routine.</p>
+<a href="#skincare-guide">Read our guide →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Fashion looks">
+<h3>Everyday Style</h3>
+<p>Fresh outfit inspiration and wardrobe ideas.</p>
+<a href="#fashion-guide">Read our guide →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Jewellery pieces">
+<h3>Little Luxuries</h3>
+<p>Discover ways to style jewellery and accessories.</p>
+<a href="#jewellery-guide">Read our guide →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Home decor">
+<h3>Beautiful Living</h3>
+<p>Warm spaces and thoughtful home details.</p>
+<a href="#living-guide">Read our guide →</a>
+</article>
+
+<article class="card">
+<img src="https://images.pexels.com/photos/2587175/pexels-photo-2587175.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Perfume and accessories">
+<h3>Little Details</h3>
+<p>Small touches to make everyday life feel lovely.</p>
+<a href="#blog">Explore our blog →</a>
+</article>
+
 </div>
 </section>
-<section class="about" id="about"><h2>Meet the Brand</h2><p>Glow &amp; Style Finds is a discovery space for people who love beauty, personal style, jewellery and thoughtful lifestyle finds. We collect ideas that catch the eye and make everyday choices feel a little more inspiring.</p><p>Follow along for new discoveries, inspiration and shopping ideas as the collection grows.</p><a class="button" href="https://www.pinterest.com/">Find us on Pinterest</a></section>
-<footer><p>Glow &amp; Style Finds</p><p>Beauty · Skincare · Fashion · Jewellery · Beautiful Living</p><small>© 2026 Glow &amp; Style Finds. All rights reserved.</small>
+
+<section class="section" id="blog">
+
+<h2>The Glow &amp; Style Journal</h2>
+
+<p class="intro">
+Welcome to our journal! Find practical ideas, inspiration
+and thoughtful guides across beauty, fashion and lifestyle.
+</p>
+
+<article class="blog-article" id="beauty-guide">
+
+<h3>1. Beauty Essentials: Building a Simple Everyday Collection</h3>
+
+<p>
+A good beauty collection does not have to be large or expensive.
+The best place to start is by understanding what you enjoy using
+and choosing versatile products that fit your everyday routine.
+</p>
+
+<h4>Start with the basics</h4>
+
+<ul>
+<li>A foundation or tinted moisturiser that suits your preferred coverage.</li>
+<li>A concealer for areas where you want a little extra coverage.</li>
+<li>A mascara to define your lashes.</li>
+<li>A blush that adds a natural-looking touch of colour.</li>
+<li>A comfortable lip colour or gloss for everyday wear.</li>
+</ul>
+
+<h4>Choose products thoughtfully</h4>
+
+<p>
+Consider your skin type, preferred finishes and the occasions
+when you normally wear makeup. Reading ingredient lists,
+checking product reviews and comparing prices can help you
+make more informed choices.
+</p>
+
+<p>
+Remember, beauty is personal. You do not need every trending
+product to create a collection that makes you feel confident.
+</p>
+
+</article>
+
+<article class="blog-article" id="skincare-guide">
+
+<h3>2. Skincare: How to Build a Simple Daily Routine</h3>
+
+<p>
+Skincare can feel overwhelming when there are so many products
+and trends to explore. A simple routine is often a better starting
+point than buying several products at once.
+</p>
+
+<h4>Your morning routine</h4>
+
+<ul>
+<li><strong>Cleanser:</strong> Gently cleanse your face using a product
+suitable for your skin.</li>
+<li><strong>Moisturiser:</strong> Help keep your skin comfortable and hydrated.</li>
+<li><strong>Sunscreen:</strong> Finish with broad-spectrum SPF 30 or higher.</li>
+</ul>
+
+<h4>Your evening routine</h4>
+
+<ul>
+<li>Remove makeup and sunscreen.</li>
+<li>Cleanse gently without scrubbing.</li>
+<li>Apply moisturiser.</li>
+</ul>
+
+<h4>Be patient with your skin</h4>
+
+<p>
+Introduce new products one at a time and patch-test when appropriate.
+Avoid changing your entire routine whenever a new trend appears.
+If you have persistent irritation or a skin concern, consult a
+qualified skincare professional or dermatologist.
+</p>
+
+</article>
+
+<article class="blog-article" id="fashion-guide">
+
+<h3>3. Fashion: Five Timeless Wardrobe Essentials</h3>
+
+<p>
+Creating a wardrobe you love is less about owning many clothes
+and more about finding pieces that work well together.
+Versatile essentials make getting dressed easier.
+</p>
+
+<h4>Five useful wardrobe foundations</h4>
+
+<ul>
+<li><strong>A classic shirt:</strong> Easy to style with trousers,
+skirts or jeans.</li>
+<li><strong>Well-fitting jeans:</strong> Choose a cut that feels
+comfortable and suits your personal style.</li>
+<li><strong>Neutral trousers:</strong> A useful option for both
+smart and relaxed outfits.</li>
+<li><strong>A versatile dress:</strong> Choose a shape that works
+for different occasions.</li>
+<li><strong>A comfortable pair of shoes:</strong> Select something
+that complements several outfits.</li>
+</ul>
+
+<h4>Make your wardrobe work harder</h4>
+
+<p>
+Try combining different textures, layering simple pieces and
+using accessories to change the appearance of an outfit.
+You can create several looks without constantly buying new clothes.
+</p>
+
+<p>
+Most importantly, wear what makes you feel comfortable and confident.
+</p>
+
+</article>
+
+<article class="blog-article" id="jewellery-guide">
+
+<h3>4. Jewellery: How to Style Accessories for Everyday Outfits</h3>
+
+<p>
+Jewellery is a wonderful way to express your personality.
+A simple outfit can feel completely different with the right
+necklace, earrings, bracelet or ring.
+</p>
+
+<h4>Simple styling ideas</h4>
+
+<ul>
+<li><strong>Layer delicate necklaces:</strong> Combine different
+lengths for a balanced look.</li>
+<li><strong>Choose everyday earrings:</strong> Small hoops and
+studs are versatile options.</li>
+<li><strong>Mix textures thoughtfully:</strong> Combine smooth,
+polished and textured pieces.</li>
+<li><strong>Use statement pieces:</strong> Let one bold accessory
+be the focus of your outfit.</li>
+<li><strong>Coordinate with your outfit:</strong> Consider colours,
+necklines and the occasion.</li>
+</ul>
+
+<h4>Take care of your jewellery</h4>
+
+<p>
+Store pieces separately to reduce scratches and tangling.
+Keep them away from excessive moisture, perfumes and harsh
+chemicals, following the care instructions for each material.
+</p>
+
+<p>
+You do not need expensive jewellery to create a beautiful look.
+Choose pieces you enjoy wearing and that suit your lifestyle.
+</p>
+
+</article>
+
+<article class="blog-article" id="living-guide">
+
+<h3>5. Beautiful Living: Simple Ways to Make Your Home Feel Special</h3>
+
+<p>
+A beautiful home is not necessarily an expensive one.
+Small thoughtful changes can make your space feel more welcoming,
+organised and personal.
+</p>
+
+<h4>Five simple ideas</h4>
+
+<ul>
+<li><strong>Refresh your cushions:</strong> Introduce colours and
+textures that complement your furniture.</li>
+<li><strong>Use soft lighting:</strong> Lamps and warm lighting
+can create a comfortable atmosphere.</li>
+<li><strong>Add greenery:</strong> Plants or fresh flowers can
+bring life into a room.</li>
+<li><strong>Organise small spaces:</strong> Trays, baskets and
+storage boxes help reduce clutter.</li>
+<li><strong>Display personal details:</strong> Photographs,
+books and meaningful decorative objects make a space feel yours.</li>
+</ul>
+
+<h4>Decorate with intention</h4>
+
+<p>
+Before purchasing something new, think about how it will fit
+into your existing space. Choose items that are useful, beautiful
+or meaningful rather than buying things simply because they are
+trending.
+</p>
+
+<p>
+A comfortable home is one that reflects the people who live in it.
+</p>
+
+</article>
+
+</section>
+
+<section class="about" id="about">
+
+<h2>Meet the Brand</h2>
+
+<p>
+Glow &amp; Style Finds is a discovery space for people who love
+beauty, personal style, jewellery and thoughtful lifestyle finds.
+</p>
+
+<p>
+Our goal is to share practical ideas, helpful guides and
+inspiration that make everyday choices feel a little more special.
+</p>
+
+<p>
+Whether you are refreshing your skincare routine, exploring
+fashion ideas or adding thoughtful details to your home,
+we hope you find something lovely here.
+</p>
+
+<a class="button"
+href="https://www.pinterest.com/"
+target="_blank"
+rel="noopener">
+Find Us on Pinterest
+</a>
+
+</section>
+
+<footer>
+
+<p><strong>Glow &amp; Style Finds</strong></p>
+
+<p>
+Beauty · Skincare · Fashion · Jewellery · Beautiful Living
+</p>
+
+<p>
+<a href="#categories">Categories</a> |
+<a href="#blog">Our Blog</a> |
+<a href="#about">Meet the Brand</a>
+</p>
+
+<small>
+© 2026 Glow &amp; Style Finds. All rights reserved.
+</small>
+
 <div class="affiliate-disclosure">
-  <h3>Affiliate Disclosure</h3>
-  <p>
-    Glow & Style Finds participates in affiliate marketing programmes.
-    We may earn a small commission when you purchase through certain
-    links on our website, at no additional cost to you. Thank you for
-    supporting Glow & Style Finds!
-  </p>
+
+<h3>Affiliate Disclosure</h3>
+
+<p>
+Glow &amp; Style Finds may participate in affiliate marketing
+programmes. We may earn a commission when you purchase through
+qualifying affiliate links on our website, at no additional cost
+to you. Any affiliate relationships will be disclosed clearly.
+Thank you for supporting Glow &amp; Style Finds!
+</p>
+
 </div>
+
 </footer>
+
 </body>
 </html>
