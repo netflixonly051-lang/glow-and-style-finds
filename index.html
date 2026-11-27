@@ -1,66 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Glow & Style Finds shares practical beauty and skincare guides, fashion inspiration, jewellery styling and thoughtful ideas for beautiful living.">
+<meta name="p:domain_verify" content="1a6415bbc26382bf6f180f6a47cbc3ee">
+<title>Glow &amp; Style Finds | Beauty, Fashion &amp; Beautiful Living</title>
+<style>
+:root {
+  --ink: #302820;
+  --muted: #70645b;
+  --paper: #f7f3ed;
+  --white: #fff;
+  --accent: #9b6248;
+  --accent-dark: #654435;
+  --line: #e7ddd1;
+  --soft: #eee5da;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  line-height: 1.75;
+}
+a { color: var(--accent-dark); }
+header {
+  background: var(--soft);
+  border-bottom: 1px solid #d8c8b8;
+  padding: 26px 18px 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  color: var(--accent-dark);
+  font: normal 38px Georgia, serif;
+  letter-spacing: .3px;
+}
+.tagline { margin: 5px 0 14px; color: var(--muted); }
+nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 22px; }
+nav a { color: var(--accent-dark); font-weight: bold; text-decoration: none; }
+nav a:hover, a:hover { text-decoration: underline; }
+.hero {
+  padding: 76px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #eee5d9, #faf7f1 65%, #e9ded1);
+}
+.hero .eyebrow, .eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+.hero h2 {
+  max-width: 850px;
+  margin: 10px auto;
+  color: var(--accent-dark);
+  font: normal clamp(36px, 6vw, 58px)/1.15 Georgia, serif;
+}
+.hero p { max-width: 690px; margin: 16px auto; color: var(--muted); }
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 11px 22px;
+  border-radius: 3px;
+  background: var(--accent-dark);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.section { max-width: 1120px; margin: auto; padding: 54px 22px; }
+.section > h2 {
+  margin: 0 0 10px;
+  color: var(--accent-dark);
+  text-align: center;
+  font: normal 34px Georgia, serif;
+}
+.intro { max-width: 760px; margin: 0 auto 30px; color: var(--muted); text-align: center; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 5px 18px #3028200b;
+}
+.card img { display: block; width: 100%; height: 220px; object-fit: cover; }
+.card h3 { margin: 14px 16px 5px; color: var(--accent-dark); font: normal 23px Georgia, serif; }
+.card p { margin: 0 16px 12px; color: var(--muted); font-size: 14px; }
+.card a { display: inline-block; margin: 0 16px 18px; font-weight: bold; text-decoration: none; }
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 850px;
+  margin: 25px auto 35px;
+}
+.article-link {
+  display: block;
+  padding: 15px 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  text-decoration: none;
+}
+.article-link strong { display: block; color: var(--accent-dark); }
+.article-link span { color: var(--muted); font-size: 14px; }
+.featured-article {
+  max-width: 850px;
+  margin: 24px auto 28px;
+  padding: 24px;
+  border: 1px solid #d8c8b8;
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  background: #f3eee7;
+}
+.featured-article h3 {
+  margin: 5px 0 8px;
+  color: var(--accent-dark);
+  font: normal 26px Georgia, serif;
+}
+.featured-article p { margin: 0 0 12px; color: var(--muted); }
+.featured-article .button { margin-top: 4px; }
+.blog-article {
+  margin: 24px 0;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+.blog-article h3 { margin: 0 0 14px; color: var(--accent-dark); font: normal 28px/1.3 Georgia, serif; }
+.blog-article h4 { margin: 25px 0 7px; color: var(--accent); font-size: 18px; }
+.blog-article p, .blog-article li { color: #51483f; }
+.blog-article ul { padding-left: 24px; }
+.blog-article li { margin-bottom: 8px; }
+.more-reading {
+  padding: 18px 20px;
+  margin-top: 20px;
+  background: #f3eee7;
+  border-left: 3px solid var(--accent);
+}
+.about {
+  padding: 48px 22px;
+  text-align: center;
+  background: var(--soft);
+}
+.about h2 { color: var(--accent-dark); font: normal 32px Georgia, serif; }
+.about p { max-width: 740px; margin: 13px auto; color: #554a40; }
+footer {
+  padding: 34px 20px;
+  background: #3d332c;
+  color: #f8f4ee;
+  text-align: center;
+}
+footer a { color: #f3d9c6; }
+.footer-links { margin: 14px 0; }
+.disclosure {
+  max-width: 780px;
+  margin: 22px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid #ffffff45;
+  font-size: 13px;
+}
+@media (max-width: 760px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .section { padding: 42px 16px; }
+}
+@media (max-width: 520px) {
+  header h1 { font-size: 31px; }
+  .grid, .article-list { grid-template-columns: 1fr; }
+  .blog-article { padding: 21px; }
+  .card img { height: 210px; }
+}
+</style>
+</head>
+<body>
 
-<article class="blog-article" id="skincare-guide">
+<header>
+  <h1>Glow &amp; Style Finds</h1>
+  <p class="tagline">A little inspiration for your everyday glow âœ¨</p>
+  <nav aria-label="Main navigation">
+    <a href="#categories">Categories</a>
+    <a href="#finds">Latest Finds</a>
+    <a href="#journal">Our Blog</a>
+    <a href="#about">Meet the Brand</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<h3>2. Skincare: How to Build a Simple Daily Routine</h3>
+<main>
+<section class="hero">
+  <p class="eyebrow">Beauty Â· Style Â· Beautiful Living</p>
+  <h2>Find it. Love it. Style it.</h2>
+  <p>Discover beauty inspiration, simple skincare ideas, fashion tips, jewellery styling and thoughtful home inspiration.</p>
+  <a class="button" href="#journal">Explore Our Guides</a>
+</section>
 
-<p>
-Building a skincare routine does not have to mean buying lots of expensive products. The best place to start is with a few everyday essentials that suit your skin and fit comfortably into your budget.
-</p>
+<section class="section" id="categories">
+  <h2>Find Something Lovely</h2>
+  <p class="intro">Explore our favourite topics and discover fresh inspiration for your beauty routine, personal style and everyday living.</p>
+  <div class="grid">
+    <article class="card">
+      <img src="https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Beauty and makeup products arranged together">
+      <h3>Beauty</h3><p>Makeup, beauty tools and everyday essentials.</p><a href="#beauty-guide">Explore Beauty â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Skincare products">
+      <h3>Skincare</h3><p>Simple routines, ingredient explainers and thoughtful product choices.</p><a href="#skincare-guide">Explore Skincare â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Fashion outfit inspiration">
+      <h3>Fashion</h3><p>Wearable outfits, wardrobe foundations and personal style.</p><a href="#fashion-guide">Explore Fashion â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Jewellery and accessories">
+      <h3>Jewellery</h3><p>Styling ideas, materials, care and finishing touches.</p><a href="#jewellery-guide">Explore Jewellery â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Beautiful home interior">
+      <h3>Beautiful Living</h3><p>Thoughtful home details, useful accessories and inviting spaces.</p><a href="#living-guide">Explore Living â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/2587175/pexels-photo-2587175.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Perfume and personal accessories">
+      <h3>Little Luxuries</h3><p>Small details that bring personality to daily routines and spaces.</p><a href="#journal">Discover More â†’</a>
+    </article>
+  </div>
+</section>
 
-<h4>Your morning skincare routine</h4>
+<section class="section" id="finds">
+  <h2>The Latest Edit</h2>
+  <p class="intro">A collection of ideas and inspiration to help you make everyday choices feel a little more special.</p>
+  <div class="grid">
+    <article class="card">
+      <img src="https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Beauty essentials">
+      <h3>Beauty Essentials</h3><p>Discover the basics of a simple beauty collection.</p>
+      <a href="#beauty-guide">Read our guide â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Skincare shelf">
+      <h3>Your  Shelf</h3><p>Ideas for building a simple skincare routine.</p>
+      <a href="#skincare-guide">Read our guide â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Fashion looks">
+      <h3>Everyday Style</h3><p>Fresh outfit inspiration and wardrobe ideas.</p>
+      <a href="#fashion-guide">Read our guide â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Jewellery pieces">
+      <h3>Little Luxuries</h3><p>Discover ways to style jewellery and accessories.</p>
+      <a href="#jewellery-guide">Read our guide â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Home decor">
+      <h3>Beautiful Living</h3><p>Warm spaces and thoughtful home details.</p>
+      <a href="#living-guide">Read our guide â†’</a>
+    </article>
+    <article class="card">
+      <img src="https://images.pexels.com/photos/2587175/pexels-photo-2587175.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Perfume and accessories">
+      <h3>Little Details</h3><p>Small touches to make everyday life feel lovely.</p>
+      <a href="#journal">Explore our blog â†’</a>
+    </article>
+  </div>
+</section>
 
-<ul>
-<li><strong>Gentle cleanser:</strong> Choose a cleanser that removes dirt and excess oil without leaving your skin feeling tight or uncomfortable.</li>
+<section class="section" id="journal">
+  <h2>The Glow &amp; Style Journal</h2>
+  <p class="intro">Practical guides to help you understand what you are buying, compare your options and make choices that suit your needs and budget.</p>
 
-<li><strong>Moisturiser:</strong> Look for a formula that helps keep your skin hydrated. Lightweight lotions may suit people who prefer a less heavy feel, while creams can offer a richer texture.</li>
+  <div class="featured-article">
+    <p class="eyebrow">New skincare guide</p>
+    <h3>Understanding Skincare Ingredients</h3>
+    <p>Not sure what ingredients like hyaluronic acid, niacinamide, vitamin C or salicylic acid do? Explore our separate beginner-friendly guide to skincare labels and ingredients.</p>
+    <a class="button" href="skincare-ingredients.html">Read the Skincare Ingredients Guide â†’</a>
+  </div>
 
-<li><strong>Sunscreen:</strong> Choose a broad-spectrum sunscreen with SPF 30 or higher. Consider the texture and finish you enjoy so that you are more likely to use it consistently.</li>
-</ul>
+  <div class="article-list">
+    <a class="article-link" href="#beauty-guide"><strong>Beauty Essentials</strong><span>Build a useful everyday collection</span></a>
+    <a class="article-link" href="#skincare-guide"><strong>Simple Skincare Routine</strong><span>Start with the everyday basics</span></a>
+    <a class="article-link" href="skincare-ingredients.html"><strong>Understanding Skincare Ingredients</strong><span>Read our detailed standalone skincare article</span></a>
+    <a class="article-link" href="#fashion-guide"><strong>Timeless Wardrobe Essentials</strong><span>Choose versatile clothing thoughtfully</span></a>
+    <a class="article-link" href="#jewellery-guide"><strong>Choosing and Styling Jewellery</strong><span>Materials, proportions and care</span></a>
+    <a class="article-link" href="#living-guide"><strong>Beautiful Living</strong><span>Make thoughtful choices for your home</span></a>
+  </div>
 
-<h4>Your evening skincare routine</h4>
+  <article class="blog-article" id="beauty-guide">
+    <p class="eyebrow">The Beauty Edit</p>
+    <h3>Beauty Essentials: Building a Collection That Works for You</h3>
+    <p>A useful beauty collection does not need to be large or expensive. Start with the products you enjoy using, the looks you like creating and the occasions you usually get ready for. A few versatile essentials can be more practical than buying every new trend.</p>
+    <h4>Everyday makeup basics</h4>
+    <ul>
+      <li><strong>Foundation or tinted moisturiser:</strong> Choose the coverage and finish you feel comfortable wearing.</li>
+      <li><strong>Concealer:</strong> An optional product for areas where you prefer a little extra coverage.</li>
+      <li><strong>Mascara:</strong> A simple way to define your lashes.</li>
+      <li><strong>Blush:</strong> Choose a shade and texture that you enjoy and find easy to apply.</li>
+      <li><strong>Lip colour or gloss:</strong> Look for a comfortable formula and a colour that suits your personal style.</li>
+      <li><strong>Makeup brushes or tools:</strong> Choose only the tools you need for the products you use.</li>
+    </ul>
+    <h4>How to choose beauty products</h4>
+    <p>Before buying, consider the product's purpose, ingredients, shade range, texture and instructions. If you are shopping online, check the product description carefully and look for clear photographs and reliable seller information. Reviews can offer useful perspectives, but individual preferences and experiences differ.</p>
+    <h4>Beauty shopping checklist</h4>
+    <ul>
+      <li>Does this product serve a purpose in my routine?</li><li>Have I checked the shade, finish or product description?</li><li>Are the ingredients and instructions clearly listed?</li><li>Is the seller or retailer trustworthy?</li><li>Have I checked the size, price and return policy?</li><li>Will I realistically use this product?</li>
+    </ul>
+    <p>Beauty is personal. Build a collection around what you enjoy, what works with your routine and what fits your budget rather than feeling pressured to follow every trend.</p>
+  </article>
 
-<ul>
-<li><strong>Remove makeup and sunscreen:</strong> Use a suitable makeup remover or gentle cleansing product.</li>
+  <article class="blog-article" id="skincare-guide">
+    <p class="eyebrow">The Skincare Edit</p>
+    <h3>Skincare: How to Build a Simple Daily Routine</h3>
+    <p>Skincare can feel overwhelming when there are so many products and routines to explore. A simple approach is a helpful starting point: understand your skin's needs, choose suitable basics and introduce new products gradually.</p>
+    <h4>Your morning routine</h4>
+    <ul>
+      <li><strong>Cleanser:</strong> Gently cleanse using a product suitable for your skin. Some people may prefer simply rinsing with water in the morning.</li>
+      <li><strong>Moisturiser:</strong> Choose a formula that helps keep your skin comfortable and hydrated.</li>
+      <li><strong>Sunscreen:</strong> Use broad-spectrum SPF 30 or higher as the final step of your morning skincare routine. Follow the product directions and reapply as advised.</li>
+    </ul>
+    <h4>Your evening routine</h4>
+    <ul>
+      <li><strong>Remove makeup and sunscreen:</strong> Use a suitable remover if needed.</li>
+      <li><strong>Cleanse:</strong> Wash gently without scrubbing or using very hot water.</li>
+      <li><strong>Moisturise:</strong> Apply a moisturiser that suits your skin and routine.</li>
+    </ul>
+    <h4>Think about your skin's needs</h4>
+    <ul>
+      <li><strong>Oily skin:</strong> You may prefer lightweight textures that feel comfortable on your skin.</li>
+      <li><strong>Dry skin:</strong> Look for moisturising products that help reduce the feeling of tightness.</li>
+      <li><strong>Combination skin:</strong> Consider whether different areas of your face need different levels of moisture.</li>
+      <li><strong>Sensitive skin:</strong> Choose products carefully, check ingredient lists and introduce them one at a time.</li>
+    </ul>
+    <h4>What to check before buying skincare</h4>
+    <ul>
+      <li>Is the product suitable for your skin's needs?</li><li>Are the ingredients and directions clearly listed?</li><li>Have you checked the product size and price?</li><li>Is the packaging sealed and the expiry information clear where applicable?</li><li>Can you confirm that the seller is reputable?</li><li>Have you checked how to use the product safely?</li>
+    </ul>
+    <h4>Give your routine time</h4>
+    <p>Introduce new products one at a time and patch-test when appropriate. Avoid changing your entire routine whenever a new trend appears. If a product causes persistent irritation, stop using it. For ongoing skin concerns, seek advice from a qualified healthcare professional or dermatologist.</p>
+    <p>A consistent routine does not have to involve many steps. Choose products you understand, can use comfortably and can afford to replace.</p>
+    <div class="more-reading"><strong>Want to understand product labels and active ingredients?</strong><br><a href="skincare-ingredients.html">Read our detailed guide to understanding skincare ingredients â†’</a></div>
+  </article>
 
-<li><strong>Cleanse:</strong> Wash away the day's dirt, oil and product build-up without scrubbing harshly.</li>
+  <article class="blog-article" id="fashion-guide">
+    <p class="eyebrow">The Style Edit</p>
+    <h3>Fashion: Five Timeless Wardrobe Essentials</h3>
+    <p>Creating a wardrobe you love is less about owning many clothes and more about finding pieces that work well together. Choosing versatile, comfortable and well-made essentials can make getting dressed easier while helping you shop more thoughtfully.</p>
+    <h4>Five useful wardrobe foundations</h4>
+    <ul>
+      <li><strong>A classic shirt:</strong> A versatile piece that works with trousers, skirts or jeans. Choose a colour and fit that complement your existing wardrobe.</li>
+      <li><strong>Well-fitting jeans:</strong> Look for a cut that feels comfortable, suits your personal style and allows you to move easily.</li>
+      <li><strong>Neutral trousers:</strong> A useful option for both smart and relaxed outfits. Consider colours that are easy to combine with different tops.</li>
+      <li><strong>A versatile dress:</strong> Choose a comfortable shape that can work for different occasions with a few styling changes.</li>
+      <li><strong>A comfortable pair of shoes:</strong> Select a practical style that complements several outfits and suits the occasions you dress for most often.</li>
+    </ul>
+    <h4>How to choose quality clothing</h4>
+    <p>Look beyond appearance when shopping. Check the fabric composition, stitching, seams, buttons and zips. Read the care label and consider whether the item will be comfortable for the way you intend to wear it. A well-chosen piece should suit your lifestyle as well as your taste.</p>
+    <h4>Make your wardrobe work harder</h4>
+    <p>Try combining different textures, layering simple pieces and using accessories to change the appearance of an outfit. A classic shirt, for example, can be styled with jeans for a relaxed look or tailored trousers for a smarter occasion. Before buying something new, look at what you already own. You may be able to create fresh outfits by combining existing pieces in different ways.</p>
+    <h4>Fashion shopping checklist</h4>
+    <ul>
+      <li>Does the item fit comfortably?</li><li>Have I checked the fabric and care instructions?</li><li>Are the seams, stitching and fastenings well finished?</li><li>Can I style it with at least three things I already own?</li><li>Is the price reasonable for its quality and usefulness?</li><li>Have I checked the retailer's return and exchange policy?</li><li>Do I genuinely like it, rather than buying it just because it is trending?</li>
+    </ul>
+    <p>Personal style should reflect your lifestyle, preferences and budget. Choose clothes that make you feel comfortable and confident.</p>
+  </article>
 
-<li><strong>Moisturise:</strong> Apply a suitable moisturiser to help maintain your skin's hydration.</li>
-</ul>
+  <article class="blog-article" id="jewellery-guide">
+    <p class="eyebrow">The Jewellery Edit</p>
+    <h3>Jewellery: How to Choose and Style Pieces You Love</h3>
+    <p>Jewellery can add personality to an outfit, whether you prefer delicate everyday pieces or bold statement accessories. The best choices are often the ones that suit your style and that you enjoy wearing.</p>
+    <h4>Jewellery styles to explore</h4>
+    <ul>
+      <li><strong>Stud earrings:</strong> Simple and easy to pair with everyday outfits.</li>
+      <li><strong>Hoop earrings:</strong> Available in different sizes and finishes, from subtle to eye-catching.</li>
+      <li><strong>Necklaces:</strong> Choose a length and design that works with your preferred necklines.</li>
+      <li><strong>Bracelets:</strong> A simple bracelet can add detail, while several pieces can create a layered look.</li>
+      <li><strong>Rings:</strong> Explore simple bands, textured designs or statement styles.</li>
+    </ul>
+    <h4>Simple jewellery styling ideas</h4>
+    <ul>
+      <li><strong>Layer necklaces:</strong> Try different lengths to create separation and balance.</li>
+      <li><strong>Keep proportions in mind:</strong> Pair larger statement earrings with simpler accessories if you want one feature to stand out.</li>
+      <li><strong>Mix textures thoughtfully:</strong> Combine smooth, polished and textured pieces for visual interest.</li>
+      <li><strong>Consider your neckline:</strong> Choose necklace lengths that work with the shape of your outfit.</li>
+      <li><strong>Make it personal:</strong> Choose pieces that reflect your taste rather than following every trend.</li>
+    </ul>
+    <h4>What to check before buying jewellery</h4>
+    <ul>
+      <li>What material is the piece made from?</li><li>Is the metal finish or plating clearly described?</li><li>Are the measurements and dimensions provided?</li><li>Are product photographs clear and detailed?</li><li>Does the seller explain care instructions and return conditions?</li><li>Is the price appropriate for the material and design?</li>
+    </ul>
+    <h4>Looking after your jewellery</h4>
+    <p>Store pieces separately to reduce scratches and tangling. Follow the care instructions for each material and keep jewellery away from excessive moisture, perfumes and harsh chemicals when advised. Some materials require more delicate care than others.</p>
+    <p>You do not need expensive jewellery to create a lovely look. Choose pieces you enjoy wearing and that suit your everyday life.</p>
+  </article>
 
-<h4>How to choose skincare products</h4>
+  <article class="blog-article" id="living-guide">
+    <p class="eyebrow">The Living Edit</p>
+    <h3>Beautiful Living: Thoughtful Ways to Make Your Home Feel Special</h3>
+    <p>A beautiful home is not necessarily an expensive one. Small, thoughtful changes can make a space feel more welcoming, organised and personal. Start with the rooms and corners you use most, then build on what you already have.</p>
+    <h4>Five simple ways to refresh a space</h4>
+    <ul>
+      <li><strong>Play with cushions and textiles:</strong> Use cushions, throws and rugs to introduce colour, comfort and texture.</li>
+      <li><strong>Think about lighting:</strong> Table lamps and warm lighting can create a softer atmosphere in the evening.</li>
+      <li><strong>Add a touch of greenery:</strong> Plants or fresh flowers can bring natural detail into a room. Choose options that suit your space and care routine.</li>
+      <li><strong>Organise everyday items:</strong> Baskets, trays and storage boxes can help keep frequently used things tidy.</li>
+      <li><strong>Display meaningful details:</strong> Photographs, books and personal objects can make a space feel like home.</li>
+    </ul>
+    <h4>How to choose home accessories</h4>
+    <p>Consider the size of your room, the colours already present and how you use the space. Check measurements before ordering furniture or decor online. Look at the materials, cleaning instructions and product photographs, and compare prices before making a decision.</p>
+    <h4>Decorate with intention</h4>
+    <p>Before purchasing something new, think about whether it will be useful, beautiful or meaningful in your home. An accessory does not need to be expensive to make a difference. Sometimes rearranging what you already own is enough to give a room a fresh feel.</p>
+    <h4>Home shopping checklist</h4>
+    <ul>
+      <li>Have I measured the space where the item will go?</li><li>Does its size suit the room and existing furniture?</li><li>Are the materials and care instructions clear?</li><li>Does the colour or style work with what I already own?</li><li>Is the item practical for my household and daily routine?</li><li>Have I compared the price, delivery costs and return policy?</li>
+    </ul>
+    <p>A comfortable home is one that reflects the people who live in it. Choose details that make your space feel welcoming and work for your everyday needs.</p>
+  </article>
 
-<p>
-Before purchasing a skincare product, consider your skin's needs, the ingredients, the product texture and your budget. A popular product is not automatically the right choice for everyone.
-</p>
+  <article class="blog-article">
+    <h3>A Note on Thoughtful Shopping</h3>
+    <p>At Glow &amp; Style Finds, we believe useful purchases begin with good information. Compare products, read descriptions carefully, check seller policies and consider your own needs before ordering. A recommendation or popular trend is not automatically the right choice for everyone.</p>
+    <p>Some links on this website may be affiliate links. If you choose to make a purchase through a qualifying affiliate link, we may earn a commission at no extra cost to you. We aim to make any affiliate relationships clear and to share content that helps readers make informed decisions.</p>
+  </article>
+</section>
 
-<ul>
-<li><strong>For oily skin:</strong> You may prefer lightweight, non-comedogenic moisturisers.</li>
+<section class="about" id="about">
+  <h2>Meet the Brand</h2>
+  <p>Welcome to Glow &amp; Style Finds, a lifestyle inspiration space created for those who enjoy discovering beauty, personal style and thoughtful details for everyday living.</p>
+  <p>We explore five things we love: beauty, skincare, fashion, jewellery and beautiful living. Through practical guides, styling ideas and carefully considered finds, our aim is to make discovering something new feel simple and enjoyable.</p>
+  <p>We believe good choices do not have to be complicated or expensive. Whether you are looking for ideas to refresh your routine, style an outfit, choose an accessory or add warmth to your home, we hope our content gives you a helpful place to start.</p>
+  <p>Our approach is simple: share useful inspiration, encourage thoughtful choices and celebrate personal style. Thank you for being part of the Glow &amp; Style Finds community.</p>
+  <a class="button" href="https://www.pinterest.com/louatwani/" target="_blank" rel="noopener noreferrer">Find Us on Pinterest</a>
+</section>
 
-<li><strong>For dry skin:</strong> Consider richer moisturisers with ingredients such as glycerin or ceramides.</li>
+<section class="about" id="contact">
+  <h2>Contact Us</h2>
+  <p>Have a question, collaboration idea or business enquiry? We'd love to hear from you.</p>
+  <p>Email us at <a href="mailto:louatwani@gmail.com">louatwani@gmail.com</a>.</p>
+</section>
+</main>
 
-<li><strong>For sensitive skin:</strong> Look for gentle formulas and consider fragrance-free options.</li>
+<footer>
+  <p><strong>Glow &amp; Style Finds</strong></p>
+  <p>Beauty Â· Skincare Â· Fashion Â· Jewellery Â· Beautiful Living</p>
+  <p class="footer-links">
+    <a href="#categories">Categories</a> |
+    <a href="#journal">Our Blog</a> |
+    <a href="#about">Meet the Brand</a> |
+    <a href="#contact">Contact</a> |
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
+  <small>Â© 2026 Glow &amp; Style Finds. All rights reserved.</small>
+  <div class="disclosure" id="affiliate-disclosure">
+    <h3>Affiliate Disclosure</h3>
+    <p>Glow &amp; Style Finds may participate in affiliate marketing programmes. We may earn a commission when you purchase through qualifying affiliate links on this website, at no additional cost to you. Any affiliate relationships will be disclosed clearly.</p>
+    <p>Thank you for supporting Glow &amp; Style Finds.</p>
+  </div>
+</footer>
 
-<li><strong>For combination skin:</strong> Choose products that balance comfort and hydration without feeling too heavy.</li>
-</ul>
-
-<h4>What to consider before buying</h4>
-
-<p>
-When comparing skincare products, look beyond attractive packaging and marketing claims. Check the ingredient list, product size, directions for use and suitability for your skin. Compare prices from reputable retailers and read product reviews critically.
-</p>
-
-<p>
-You do not need an expensive routine to get started. A few carefully chosen essentials are often more practical than purchasing several products you may not need.
-</p>
-
-<h4>Give your skin time</h4>
-
-<p>
-Introduce new products gradually and patch-test when appropriate. Avoid changing your entire routine whenever a new trend appears. Stop using a product if it causes irritation. For persistent skin concerns, consult a qualified healthcare professional or dermatologist.
-</p>
-
-<p>
-The most useful skincare routine is one you understand, enjoy and can maintain consistently.
-</p>
-
-</article>
+</body>
+</html>
